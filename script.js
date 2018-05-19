@@ -70,12 +70,24 @@ function makeRandomBoardOfColoredSquares() {
 
 //generate a checkerboard and make it gradient from top to bottom
 
+function generateGradientCheckerBoard() {
+    let color1 = generatedRandomColor();
+    let color2 = generatedRandomColor();
+    console.log(color1);
+    console.log(color2);
+    makeCheckerBoard(color1 ,color2);
+    let backgroundContainer = document.getElementsByTagName("body")[0];
+    backgroundContainer.setAttribute("style", "background: linear-gradient(red,blue);z-index:4;");
+    // let gradientLayer = document.createElement('div');    
+    // document.body.appendChild(gradientLayer);
+    // gradientLayer.setAttribute("style", "background: linear-gradient(red,blue);z-index:1; ");
+};
+
+generateGradientCheckerBoard();
 
 
 
-
-
-
+//note: to create a radient effect on each square could use css's repeating-linear-gradient:. 
 
 
 //generate a checkerboard and make the squares flash a different color
@@ -104,4 +116,4 @@ function generateFlashingCheckerBoard () {
 }
 
 //uncomment below to invoke function 
-generateFlashingCheckerBoard()
+//generateFlashingCheckerBoard()
