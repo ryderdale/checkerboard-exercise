@@ -37,7 +37,8 @@ function generatedRandomColor () {
     let numberOne = Math.floor(Math.random() * 255)
     let numberTwo = Math.floor(Math.random() * 255)
     let numberThree = Math.floor(Math.random() * 255)
-    return (`rgb(${numberOne},${numberTwo},${numberThree})`);
+    let numberFour = .3;
+    return (`rgb(${numberOne},${numberTwo},${numberThree},${numberFour})`);
 };
 
 //generate a checkerboard made of two random colors
@@ -71,19 +72,23 @@ function makeRandomBoardOfColoredSquares() {
 //generate a checkerboard and make it gradient from top to bottom
 
 function generateGradientCheckerBoard() {
+    
+   
     let color1 = generatedRandomColor();
     let color2 = generatedRandomColor();
     console.log(color1);
     console.log(color2);
-    makeCheckerBoard(color1 ,color2);
+    makeCheckerBoard(color1, color2);
     let backgroundContainer = document.getElementsByTagName("body")[0];
-    backgroundContainer.setAttribute("style", "background: linear-gradient(red,blue);");
-        
-    document.body.appendChild(backgroundContainer);
+    backgroundContainer.setAttribute("style", "background: linear-gradient(#e66465, #9198e5); z-index: 2;");
+    document.body.appendChild(backgroundContainer); 
+    
+    
+    
     // gradientLayer.setAttribute("style", "background: linear-gradient(red,blue);z-index:1;");
 };
 
-//generateGradientCheckerBoard();
+generateGradientCheckerBoard();
 
 
 
@@ -116,4 +121,4 @@ function generateFlashingCheckerBoard () {
 }
 
 //uncomment below to invoke function 
-generateFlashingCheckerBoard()
+//generateFlashingCheckerBoard()
