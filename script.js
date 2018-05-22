@@ -77,13 +77,13 @@ function generateGradientCheckerBoard() {
     console.log(color2);
     makeCheckerBoard(color1 ,color2);
     let backgroundContainer = document.getElementsByTagName("body")[0];
-    backgroundContainer.setAttribute("style", "background: linear-gradient(red,blue);z-index:4;");
-    // let gradientLayer = document.createElement('div');    
-    // document.body.appendChild(gradientLayer);
-    // gradientLayer.setAttribute("style", "background: linear-gradient(red,blue);z-index:1; ");
+    backgroundContainer.setAttribute("style", "background: linear-gradient(red,blue);");
+        
+    document.body.appendChild(backgroundContainer);
+    // gradientLayer.setAttribute("style", "background: linear-gradient(red,blue);z-index:1;");
 };
 
-generateGradientCheckerBoard();
+//generateGradientCheckerBoard();
 
 
 
@@ -116,4 +116,4 @@ function generateFlashingCheckerBoard () {
 }
 
 //uncomment below to invoke function 
-//generateFlashingCheckerBoard()
+generateFlashingCheckerBoard()
